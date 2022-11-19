@@ -1,0 +1,8 @@
+Server=DESKTOP-A8OC647;Database=APP_Scientometrie;Trusted_Connection=True;MultipleActiveResultSets=True;
+
+Server=tcp:scientometrymta.database.windows.net,1433;Initial Catalog=scientometrymtadatabase;Persist Security Info=False;User ID=iulian;Password=Parola12345.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+dotnet publish -c Release
+ng build
+
+Scaffold-DbContext "Server=DESKTOP-NE7FBQ7;Database=APP_Scientometrie;Trusted_Connection=True;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Connection Timeout=30;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
