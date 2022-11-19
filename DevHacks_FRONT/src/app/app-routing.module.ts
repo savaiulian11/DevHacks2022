@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ActivityComponent } from './activity/activity.component';
 import { HistoryComponent } from './history/history.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
@@ -11,7 +10,6 @@ import { StartComponent } from './start/start.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'start',pathMatch:'full'},
-  {path:'activity',component:ActivityComponent},
   {path:'history/:id',component:HistoryComponent},
   {path:'login',component:LoginComponent},
   {path:'recover',component:RecoverPasswordComponent},
