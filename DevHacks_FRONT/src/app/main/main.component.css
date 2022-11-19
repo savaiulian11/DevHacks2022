@@ -1,0 +1,90 @@
+h1 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.checkbox_box{
+    margin-left: 5px;
+}
+
+nav{
+    border-radius: 10px;
+    background-color: #7a059e;
+  }
+.navbar-toggler{
+    background-color: #49065e;
+}
+
+.timer_button {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: bold;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+    border-radius: 6px;
+    border: none;
+  
+    color: #fff;
+    background: linear-gradient(180deg, #01265e 0%, #0342b8 100%);
+    background-origin: border-box;
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+      inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .timer_button:focus {
+    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2),
+      0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+      0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+    outline: 0;
+  }
+
+
+h1 {
+    font-weight: bold;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #6288df14;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.buttons{
+    display:flex;
+}
+
+.sw-container{
+    background-image: linear-gradient(to right, #7774ed, #aec4f8, #7774ed);
+    padding: 15px 20px;
+    border-radius: 100px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(129,129,129,0.16),
+    0 3px 6px rgba(105,105,105,0.23),
+}
+
+.message{
+    text-align: center;
+    font-size: 50px;
+}
+
+.stopwatch{
+    font-size: calc(0.75em + 14vw);
+    margin-bottom: 15px;
+
+}
