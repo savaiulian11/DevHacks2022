@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NIqlX6GyTd/KAkEXwfbi3chklVetR0orKAFqd5mOi9C0HRPkm01c0jvz8+/GxxN9ebrg3oR/SbazKgAtTSLBvQ==",
+  "dgSpecHash": "IkVqFPbLESzxbefaL/I2t83hvMp5tQfAK6b7WqwEABgmTJySvUCx4ukLQMJG5QLSVCIb4vSVq4Rq/pkRTQl/ZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\savai\\Desktop\\Git Repository\\ATM-Team-Health_Is_Life\\DevHacks_API\\DevHacks2022\\DevHacks2022.csproj",
+  "projectFilePath": "C:\\Users\\savai\\Desktop\\Git Repository\\DevHacks2022\\DevHacks_API\\DevHacks2022\\DevHacks2022.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\savai\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\savai\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

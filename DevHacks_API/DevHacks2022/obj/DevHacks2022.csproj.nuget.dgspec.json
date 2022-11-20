@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\savai\\Desktop\\Git Repository\\ATM-Team-Health_Is_Life\\DevHacks_API\\DevHacks2022\\DevHacks2022.csproj": {}
+    "C:\\Users\\savai\\Desktop\\Git Repository\\DevHacks2022\\DevHacks_API\\DevHacks2022\\DevHacks2022.csproj": {}
   },
   "projects": {
-    "C:\\Users\\savai\\Desktop\\Git Repository\\ATM-Team-Health_Is_Life\\DevHacks_API\\DevHacks2022\\DevHacks2022.csproj": {
+    "C:\\Users\\savai\\Desktop\\Git Repository\\DevHacks2022\\DevHacks_API\\DevHacks2022\\DevHacks2022.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\savai\\Desktop\\Git Repository\\ATM-Team-Health_Is_Life\\DevHacks_API\\DevHacks2022\\DevHacks2022.csproj",
+        "projectUniqueName": "C:\\Users\\savai\\Desktop\\Git Repository\\DevHacks2022\\DevHacks_API\\DevHacks2022\\DevHacks2022.csproj",
         "projectName": "DevHacks2022",
-        "projectPath": "C:\\Users\\savai\\Desktop\\Git Repository\\ATM-Team-Health_Is_Life\\DevHacks_API\\DevHacks2022\\DevHacks2022.csproj",
+        "projectPath": "C:\\Users\\savai\\Desktop\\Git Repository\\DevHacks2022\\DevHacks_API\\DevHacks2022\\DevHacks2022.csproj",
         "packagesPath": "C:\\Users\\savai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\savai\\Desktop\\Git Repository\\ATM-Team-Health_Is_Life\\DevHacks_API\\DevHacks2022\\obj\\",
+        "outputPath": "C:\\Users\\savai\\Desktop\\Git Repository\\DevHacks2022\\DevHacks_API\\DevHacks2022\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\savai\\AppData\\Roaming\\NuGet\\NuGet.Config",

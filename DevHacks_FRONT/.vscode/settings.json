@@ -1,5 +1,10 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
     "appService.defaultWebAppToDeploy": "/subscriptions/e019a1e2-3b75-4b7d-b022-787212fc2a33/appservices/subscriptions/e019a1e2-3b75-4b7d-b022-787212fc2a33/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/burnout",
-    "appService.deploySubpath": "./DevHacks_FRONT/dist/dev-hacks-front"
+    "appService.deploySubpath": "DevHacks2022/DevHacks_FRONT/dist/dev-hacks-front",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.showBuildDuringDeployPrompt": false
 }
