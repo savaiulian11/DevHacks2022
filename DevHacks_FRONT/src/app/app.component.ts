@@ -8,7 +8,7 @@ import * as $ from 'jquery';
 })
 export class AppComponent {
   title = 'DevHacks_FRONT';
-  online: number = 0;
+  online: number = 3;
   page: number = 0;
 
   togglerClick() {
