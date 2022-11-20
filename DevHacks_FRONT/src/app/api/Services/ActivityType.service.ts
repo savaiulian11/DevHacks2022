@@ -12,18 +12,18 @@ export class ActivityTypeService {
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<ActivityType[]>{
-    return this.http.get<ActivityType[]>(environment.URL+"/ActivityType/GetAll");
+    return this.http.get<ActivityType[]>(environment.URL+"/Activity_Types/GetAll");
   }
 
   post(ActivityType:ActivityType){
-    return this.http.post<ActivityType>(environment.URL+"/ActivityType",ActivityType);
+    return this.http.post<ActivityType>(environment.URL+"/Activity_Types",ActivityType);
   }
 
   put(ActivityType:ActivityType){
-    return this.http.put<ActivityType>(environment.URL+"/ActivityType",ActivityType);
+    return this.http.put<ActivityType>(environment.URL+"/Activity_Types",ActivityType);
   }
 
   delete(id:number){
-    return this.http.delete(environment.URL + "/ActivityType" + id);
+    return this.http.delete(environment.URL + "/Activity_Types" + id);
   }
 }

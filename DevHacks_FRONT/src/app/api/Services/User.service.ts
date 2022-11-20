@@ -1,29 +1,34 @@
 import { Injectable } from '@angular/core';
-import { Afiliere } from '../Models/Afiliere';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
+import { User } from '../Models/User';
+import { LoginWrapper } from '../Wrappers/LoginWrapper';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AfiliereService {
+export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  getAll(): Observable<Afiliere[]>{
-    return this.http.get<Afiliere[]>(environment.URL+"/Afiliere/GetAll");
+  getAll(): Observable<User[]>{
+    return this.http.get<User[]>(environment.URL+"/Users/GetAll");
   }
 
-  post(afiliere:Afiliere){
-    return this.http.post<Afiliere>(environment.URL+"/Afiliere",afiliere);
+  login(login:LoginWrapper) {
+    return this.http.post<any>(environment.URL+"/Users/Login",login);
   }
 
-  put(afiliere:Afiliere){
-    return this.http.put<Afiliere>(environment.URL+"/Afiliere",afiliere);
+  post(User:User){
+    return this.http.post<User>(environment.URL+"/Users/Post",User);
+  }
+
+  put(User:User){
+    return this.http.put<User>(environment.URL+"/Users/Put",User);
   }
 
   delete(id:number){
-    return this.http.delete(environment.URL + "/Afiliere" + id);
+    return this.http.delete(environment.URL + "/Users/Delete" + id);
   }
 }

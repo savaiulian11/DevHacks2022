@@ -4,15 +4,12 @@ import { AppComponent } from '../app.component';
 @Component({
   selector: 'app-rewards',
   templateUrl: './rewards.component.html',
-  styleUrls: ['./rewards.component.css']
+  styleUrls: ['./rewards.component.css'],
 })
 export class RewardsComponent implements OnInit {
-
-  constructor(private appComponent:AppComponent) { 
-    this.appComponent.page=1;
+  constructor(private appComponent: AppComponent) {
+    this.appComponent.page = 1;
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

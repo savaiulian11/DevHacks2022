@@ -1,4 +1,4 @@
-export interface LoginWrapper {
-  numeUtilizator: string;
-  parola: string;
+export interface LoginWrapper{
+    username:string;
+    password:string;
 }

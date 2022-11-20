@@ -1,4 +1,10 @@
-import {Component,ElementRef,HostListener,OnInit,ViewChild,} from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
@@ -49,12 +55,12 @@ export class RecoverPasswordComponent implements OnInit {
     //   .getVerificationCode(this.emailForm.value['email'])
     //   .subscribe((res) => {
     //     this.code = res;
-        // if (this.code == undefined) alert('Email incorrect');
-        // else {
-          this.sent = 1;
-          $('#emailInput').prop('disabled', true);
-          $('#sendEmailButton').prop('disabled', true);
-        // }
+    // if (this.code == undefined) alert('Email incorrect');
+    // else {
+    this.sent = 1;
+    $('#emailInput').prop('disabled', true);
+    $('#sendEmailButton').prop('disabled', true);
+    // }
     //   });
   }
 

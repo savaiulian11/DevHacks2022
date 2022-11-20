@@ -1,7 +1,7 @@
 export interface Activity{
-    Id:number;
-    IdType:number;
-    Name:string;
-    Description:string;
-    Link:string;
+    id:number;
+    idType:number;
+    name:string;
+    description:string;
+    link:string;
 }

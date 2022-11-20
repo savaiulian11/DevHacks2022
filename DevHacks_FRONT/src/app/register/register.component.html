@@ -1,77 +1,64 @@
 <div id="body" class="container">
-    <h1>Register</h1>
-    <form [formGroup]="myForm">
-      <div class="form-group">
-        <label for="usernameInput">Username</label>
-        <input
-          formControlName="username"
-          class="form-control"
-          id="usernameInput"
-          formControlName="usernameInput"
-        />
-      </div>
-      <div *ngIf="validators[0] == 0">
-        Invalid username
-      </div>
-      <div class="form-group">
-        <label for="passwordInput">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="passwordInput"
-          formControlName="passwordInput"
-        />
-      </div>
-      <div *ngIf="validators[1] == 0">
-        Invalid password.
-      </div>
-      <div class="form-group">
-        <label for="RpasswordInput">Repeat password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="RpasswordInput"
-          formControlName="RpasswordInput"
-        />
-      </div>
-      <div *ngIf="validators[2] == 0">
-        Invalid password.
-      </div>
-      <div *ngIf="validators[4] == 0">
-        Passwords are not the same.
-      </div>
-      <div class="form-group">
-        <label for="emailInput">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          id="emailInput"
-          formControlName="emailInput"
-        />
-      </div>
-      <div *ngIf="validators[3] == 0">
-        Invalid email.
-      </div>
-      <div class="form-group">
-        <label for="emailInput">Phone Number</label>
-        <input
-          class="form-control"
-          id="phoneInput"
-          formControlName="phoneInput"
-        />
-      </div>
-      <div *ngIf="validators[3] == 0">
-        Invalid email.
-      </div>
-      <br>
-      <button
-        type="submit"
-        class="btn btn-light"
-        routerLinkActive="active"
-        (click)="sendForm()"
-      >
-        Submit
-      </button>
-    </form>
-  </div>
-  
+  <h1>Register</h1>
+  <form [formGroup]="myForm">
+    <div class="form-group">
+      <label for="usernameInput">Username</label>
+      <input
+        formControlName="username"
+        class="form-control"
+        id="usernameInput"
+        formControlName="usernameInput"
+      />
+    </div>
+    <div *ngIf="validators[0] == 0">Invalid username</div>
+    <div class="form-group">
+      <label for="passwordInput">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="passwordInput"
+        formControlName="passwordInput"
+      />
+    </div>
+    <div *ngIf="validators[1] == 0">Invalid password.</div>
+    <div class="form-group">
+      <label for="RpasswordInput">Repeat password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="RpasswordInput"
+        formControlName="RpasswordInput"
+      />
+    </div>
+    <div *ngIf="validators[2] == 0">Invalid password.</div>
+    <div *ngIf="validators[4] == 0">Passwords are not the same.</div>
+    <div class="form-group">
+      <label for="emailInput">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="emailInput"
+        formControlName="emailInput"
+      />
+    </div>
+    <div *ngIf="validators[3] == 0">Invalid email.</div>
+    <div class="form-group">
+      <label for="emailInput">Phone Number</label>
+      <input
+        class="form-control"
+        id="phoneInput"
+        formControlName="phoneInput"
+      />
+    </div>
+    <div *ngIf="validators[3] == 0">Invalid email.</div>
+    <br />
+    <button
+      type="submit"
+      class="btn btn-light"
+      routerLinkActive="active"
+      (click)="sendForm()"
+    >
+      Submit
+    </button>
+  </form>
+</div>

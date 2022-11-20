@@ -5,9 +5,9 @@ namespace DevHacks2022.Wrappers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LoginWrapper : ControllerBase
+    public partial class LoginWrapper
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string? Username { get; set; }
+        public string? Password { get; set; }
     }
 }

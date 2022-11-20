@@ -1,50 +1,45 @@
 <div id="body" class="container">
-    <h1 >Login</h1>
-    <div class="container" id="subContainer">
-      <form [formGroup]="myForm">
-        <div class="form-group">
-          <label for="usernameInput">Username</label>
-          <input
-            type="username"
-            class="form-control"
-            id="usernameInput"
-            placeholder="Username"
-            formControlName="username"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="passwordInput">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="passwordInput"
-            placeholder="Password"
-            formControlName="password"
-          />
-        </div>
-      </form>
-      <br>
-      <button
-        id="submitButton"
-        type="button"
-        class="btn btn-light"
-        (click)="onSubmit()"
-      >
-        Submit
-      </button>
-      <br>
-      <a
-        class="links"
-        href="#"
-        routerLink="/recover"
-        routerLinkActive="active"
-        >Forgot password?</a
-      >
-      <br />
-      <a class="links" href="#" routerLink="/register" routerLinkActive="active"
-        >New account</a
-      >
-    </div>
+  <h1>Login</h1>
+  <div class="container" id="subContainer">
+    <form [formGroup]="myForm">
+      <div class="form-group">
+        <label for="usernameInput">Username</label>
+        <input
+          type="username"
+          class="form-control"
+          id="usernameInput"
+          placeholder="Username"
+          formControlName="username"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="passwordInput">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="passwordInput"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </div>
+    </form>
+    <br />
+    <button
+      id="submitButton"
+      type="button"
+      class="btn btn-light"
+      (click)="onSubmit()"
+    >
+      Submit
+    </button>
+    <br />
+    <a class="links" href="#" routerLink="/recover" routerLinkActive="active"
+      >Forgot password?</a
+    >
+    <br />
+    <a class="links" href="#" routerLink="/register" routerLinkActive="active"
+      >New account</a
+    >
   </div>
-  
+</div>

@@ -9,19 +9,19 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { StartComponent } from './start/start.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'start',pathMatch:'full'},
-  {path:'history/:id',component:HistoryComponent},
-  {path:'login',component:LoginComponent},
-  {path:'recover',component:RecoverPasswordComponent},
-  {path:'register',component:RegisterComponent},
-  {path:'rewards/:id',component:RewardsComponent},
-  {path:'start',component:StartComponent},
-  {path:'home/:id',component:MainComponent},
-  { path: '**', component: StartComponent }
+  { path: '', redirectTo: 'start', pathMatch: 'full' },
+  { path: 'history/:id', component: HistoryComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'recover', component: RecoverPasswordComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'rewards/:id', component: RewardsComponent },
+  { path: 'start', component: StartComponent },
+  { path: 'home/:id', component: MainComponent },
+  { path: '**', component: StartComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

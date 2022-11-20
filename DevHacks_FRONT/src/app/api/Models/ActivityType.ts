@@ -1,4 +1,4 @@
 export interface ActivityType{
-    Id:number;
-    Name:string;
+    id:number;
+    name:string;
 }

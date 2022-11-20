@@ -7,23 +7,23 @@ import { Activity } from '../Models/Activity';
 @Injectable({
   providedIn: 'root'
 })
-export class AfiliereService {
+export class ActivityService {
 
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Activity[]>{
-    return this.http.get<Activity[]>(environment.URL+"/Activity/GetAll");
+    return this.http.get<Activity[]>(environment.URL+"/Activities/GetAll");
   }
 
   post(Activity:Activity){
-    return this.http.post<Activity>(environment.URL+"/Activity",Activity);
+    return this.http.post<Activity>(environment.URL+"/Activities",Activity);
   }
 
   put(Activity:Activity){
-    return this.http.put<Activity>(environment.URL+"/Activity",Activity);
+    return this.http.put<Activity>(environment.URL+"/Activities",Activity);
   }
 
   delete(id:number){
-    return this.http.delete(environment.URL + "/Activity" + id);
+    return this.http.delete(environment.URL + "/Activities" + id);
   }
 }

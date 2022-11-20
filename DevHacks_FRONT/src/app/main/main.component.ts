@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription, timer } from 'rxjs';
+import { Activity } from '../api/Models/Activity';
+import { ActivityType } from '../api/Models/ActivityType';
+import { ActivityService } from '../api/Services/Activity.service';
+import { ActivityTypeService } from '../api/Services/ActivityType.service';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -8,7 +12,8 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  items: any = ['Static(1 Point)', 'Dinamic(1 Point)', 'Social(2 Point)'];
+  items: ActivityType[] = [];
+  chechedItems: number[] = [];
 
   workedTime: any = '00:00:00';
   ms: any = '0' + 0;
@@ -106,12 +111,33 @@ export class MainComponent implements OnInit {
     document.getElementById('activityButton')?.click();
   }
 
-  generateActivity(){
-    this.activityGenerator=true;
+  myActivity: Activity=<Activity>{};
+
+  generateActivity() {
+    this.activityGenerator = true;
+    const result =
+      Math.floor(Math.random() * (this.chechedItems.length - 0 + 1)) + 0;
+  
+      this.activity.getAll().subscribe(res=>{this.myActivity=res[3]})
+  
+    }
+
+  saveChecked(id: number) {
+    this.chechedItems.push(id);
   }
 
-  constructor(private appComponent: AppComponent) {
+  constructor(
+    private appComponent: AppComponent,
+    private activityTypes: ActivityTypeService,
+    private activity:ActivityService
+  ) {
     this.appComponent.page = 1;
+    this.activityTypes.getAll().subscribe((data) => {
+      data.forEach((element) => {
+        this.items?.push(element);
+      });
+      console.log(data);
+    });
   }
 
   ngOnInit(): void {}

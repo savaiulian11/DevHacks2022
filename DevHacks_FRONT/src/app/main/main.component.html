@@ -98,25 +98,26 @@
               type="checkbox"
               value=""
               id="flexCheckDefault"
+              (click)="saveChecked(item.id)"
             />
             <label class="form-check-label" for="flexCheckDefault">
-              {{ item }}
+              {{ item.name }}
             </label>
           </div>
         </div>
 
         <div class="challange" *ngIf="activityGenerator == true">
-          <div>Name</div>
-          <div>Description</div>
-          <div>Link</div>
+          <div><strong>Name:</strong> {{myActivity.name}}</div>
+          <div><strong>Description:</strong> {{myActivity.description}}</div>
+          <div><a href={{myActivity.link}} target="_blank">Demo</a></div>
         </div>
       </div>
-      <div>
+      <div *ngIf="activityGenerator == true">
         Try the challange with some college! Every person that joins you adds 1
         point to final score.
       </div>
-      <table>
-        <tr *ngFor="let item of onlinePeople">
+      <table *ngIf="activityGenerator == true">
+        <tr *ngFor="let item of onlinePeople" >
           <td class="form-check-label" for="flexCheckDefault">-{{ item }}</td>
           <td>
             <button class="btn" style="background-color: #8ee000" type="button">

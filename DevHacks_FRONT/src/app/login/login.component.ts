@@ -1,6 +1,9 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from '../api/Services/User.service';
+import { LoginWrapper } from '../api/Wrappers/LoginWrapper';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -15,12 +18,20 @@ export class LoginComponent implements OnInit {
   });
 
   onSubmit() {
-    //this.appComponent.togglerClick();
     if (this.myForm.value.password == undefined) return;
 
-    console.log(this.myForm.value.password);
+    const loginData: LoginWrapper = <LoginWrapper>{
+      username: this.myForm.value.username,
+      password: this.myForm.value.password,
+    };
 
-    this.route.navigate(['/home/3']);
+    this.userService.login(loginData).subscribe(
+      (data) => {
+        console.log(data);
+        this.route.navigate(['/home/'+data.ID]);
+      },
+      (err: HttpErrorResponse) => {}
+    );
   }
 
   @HostListener('document:keyup', ['$event'])
@@ -32,7 +43,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private form: FormBuilder,
     private route: Router,
-    private appComponent: AppComponent
+    private appComponent: AppComponent,
+    private userService: UserService
   ) {
     this.appComponent.page = 0;
   }

@@ -3,6 +3,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AppComponent } from '../app.component';
+import { User } from '../api/Models/User';
+import { UserService } from '../api/Services/User.service';
 
 @Component({
   selector: 'app-register',
@@ -31,66 +33,26 @@ export class RegisterComponent implements OnInit {
   });
 
   sendForm() {
-    if (this.handleErori() == 1) return;
-
     if (this.myForm.value.passwordInput == undefined) return;
 
     console.log(this.myForm);
-    // const utilizator:Utilizator = <Utilizator>{
-    //   NumeUtilizator:this.formular.value.numeUtilizatorInput,
-    //   Parola:this.formular.value.parolaInput,
-    //   Email:this.formular.value.emailInput,
-    //   Drepturi:1
-    // }
+    const utilizator:User = <User>{
+      Username:this.myForm.value.usernameInput,
+      Password:this.myForm.value.passwordInput,
+      Email:this.myForm.value.emailInput,
+      Number:this.myForm.value.phoneInput,
+    }
 
-    // this.uService.post(utilizator).subscribe(
-    //   data => {console.log(data)},
-    //   (err:HttpErrorResponse) => {
-    //   });
+    this.userService.post(utilizator).subscribe(
+      data => {console.log(data)},
+      (err:HttpErrorResponse) => {
+      });
 
     this.router.navigate(['/login']);
   }
-
-  handleErori() {
-    let result = 0;
-    let temp = this.myForm.get('usernameInput');
-    if (temp?.status == 'INVALID' || temp?.value == '') this.validators[0] = 1;
-    else {
-      this.validators[0] = 1;
-      result = 1;
-    }
-    temp = this.myForm.get('passwordInput');
-    if (temp?.status == 'INVALID' || temp?.value == '') this.validators[1] = 1;
-    else {
-      this.validators[1] = 1;
-      result = 1;
-    }
-    temp = this.myForm.get('RpasswordInput');
-    if (temp?.status == 'INVALID' || temp?.value == '') this.validators[2] = 1;
-    else {
-      this.validators[2] = 1;
-      result = 1;
-    }
-    temp = this.myForm.get('emailInput');
-    if (temp?.status == 'INVALID' || temp?.value == '') this.validators[3] = 1;
-    else {
-      this.validators[3] = 1;
-      result = 1;
-    }
-
-    if (this.myForm.get('parolaInput') == this.myForm.get('RparolaInput'))
-      this.validators[3] = 1;
-    else {
-      this.validators[4] = 1;
-      result = 1;
-    }
-    return result;
-  }
-
   @HostListener('document:keyup', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     if (event.key == 'Enter') {
-      if (this.handleErori() == 1) return;
       this.sendForm();
     }
   }
@@ -98,7 +60,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private form: FormBuilder,
     private router: Router,
-    private appComponent: AppComponent
+    private appComponent: AppComponent,
+    private userService: UserService
   ) {
     this.appComponent.page = 0;
   }
