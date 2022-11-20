@@ -1,8 +1,10 @@
 npm install --save @capacitor/core @capacitor/cli
 
-ng build --configuration production
+ng build
 
 angular.json->“outputPath”: “dist/AngularApp” to “outputPath”: “www”
+
+ng build --configuration production
 
 npx cap init
 // @ts-ignore 
