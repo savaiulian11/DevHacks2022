@@ -7,9 +7,13 @@ Aplicatie anti-burnout
 
 Utilizatorii sunt angajatii companiei.
 
-Functionalitati:
+- Functionalitati:
     -> monitorizare timp de lucru  
     -> avertizare burnout  
     -> monitorizare utilizatori din aceeasi companie  
     -> sistem de reward pentru activitati  
     -> monitorizare timp lucru/zi  
+    
+ - Prezentari:
+https://youtu.be/d2HPoDCCBr0
+https://youtu.be/UJiwIxTTaYM
