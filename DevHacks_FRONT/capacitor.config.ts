@@ -2,9 +2,9 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.burnout.app',
+  appId: 'com.BURNOUT.app',
   appName: 'BURNOUT',
-  webDir:'dist/dev-hacks-front',
+  webDir:'dist',
   bundledWebRuntime: false
 };
 

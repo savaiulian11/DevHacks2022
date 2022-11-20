@@ -1,4 +1,4 @@
-package com.burnout.app;
+package com.BURNOUT.app;
 
 import com.getcapacitor.BridgeActivity;
 
