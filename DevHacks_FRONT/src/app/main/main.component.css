@@ -29,10 +29,9 @@ nav{
     border-radius: 6px;
     border: none;
   
-    color: #fff;
-    background: linear-gradient(180deg, #01265e 0%, #0342b8 100%);
+    color: rgb(0, 0, 0);
     background-origin: border-box;
-    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+    box-shadow: 0px 0.5px 1.5px rgba(24, 24, 24, 0.25),
       inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
     user-select: none;
     -webkit-user-select: none;
@@ -68,7 +67,7 @@ body {
 }
 
 .sw-container{
-    background-image: linear-gradient(to right, #7774ed, #aec4f8, #7774ed);
+    background-image: linear-gradient(to right, #555555, #a4a6a8, #555555);
     padding: 15px 20px;
     border-radius: 100px;
     color: #fff;
@@ -84,7 +83,8 @@ body {
 }
 
 .stopwatch{
-    font-size: calc(0.75em + 14vw);
+    font-size: calc(0.75em + 12vw);
+
     margin-bottom: 15px;
 
 }

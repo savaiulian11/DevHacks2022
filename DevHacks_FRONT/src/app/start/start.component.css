@@ -1,6 +1,12 @@
 h1 {
     font-weight: bold;
     color: #fff;
+    font-size: xxx-large;
+}
+
+.text{
+    font-size: calc(0.18em + 5vw);
+    font-family: fantasy;
 }
   
 button {

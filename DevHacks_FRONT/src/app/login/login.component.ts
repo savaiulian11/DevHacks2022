@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import * as bcrypt from 'bcryptjs';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
   });
 
   onSubmit() {
+    //this.appComponent.togglerClick();
     if(this.myForm.value.password==undefined)
     return;
 
@@ -40,6 +42,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private form: FormBuilder,
     private route: Router,
+    private appComponent:AppComponent
   ) {}
 
   ngOnInit(): void {
