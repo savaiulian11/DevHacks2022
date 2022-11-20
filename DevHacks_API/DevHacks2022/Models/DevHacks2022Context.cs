@@ -76,6 +76,7 @@ public partial class DevHacks2022Context : DbContext
             entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("ID");
+            entity.Property(e => e.Provider).HasMaxLength(100);
             entity.Property(e => e.Description).HasMaxLength(300);
             entity.Property(e => e.Milestone).ValueGeneratedOnAdd();
             entity.Property(e => e.Name).HasMaxLength(50);

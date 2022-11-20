@@ -33,7 +33,7 @@ namespace DevHacks2022.Controllers
         {
             try
             {
-                dynamic result = BasicQuery.Insert(_context, reward, BasicQuery.Company_Users);
+                dynamic result = BasicQuery.Insert(_context, reward, BasicQuery.Rewards);
                 return StatusCode(200, result);
             }
             catch (Exception ex)
