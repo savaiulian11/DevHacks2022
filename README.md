@@ -15,6 +15,6 @@ Utilizatorii sunt angajatii companiei.
     -> monitorizare timp lucru/zi  
     
  - Prezentari:  
-https://youtu.be/UJiwIxTTaYM
+https://youtu.be/UJiwIxTTaYM  
 https://youtu.be/d2HPoDCCBr0  
   
