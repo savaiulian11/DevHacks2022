@@ -4,11 +4,11 @@
   integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
   crossorigin="anonymous"
 />
-<div class="row">
-  <div class="col-xl-6 col-lg-6 col-md-6">
+<table style="width: 100%">
+  <td>
     <strong>Worked time: {{ fullHr }}:{{ fullMin }}:{{ fullSec }}</strong>
-  </div>
-  <div class="col-xl-6 col-lg-6 col-md-6" style="text-align: end">
+  </td>
+  <td style="text-align: end">
     <a
       id="activityButton"
       data-bs-toggle="offcanvas"
@@ -19,15 +19,15 @@
     >
       Activity Menu
     </a>
-  </div>
-</div>
+  </td>
+</table>
 
 <div>
-<div class="message" *ngIf="running == true">
+  <div class="message" *ngIf="running == true">
     <p>Please press</p>
     <strong>STOP BUTTON</strong>
     <p>when you want to take a break.</p>
-    </div>
+  </div>
   <div class="message" *ngIf="running == false">
     <p>Please press</p>
     <strong>START BUTTON</strong>
@@ -45,11 +45,7 @@
 
   <br />
   <form class="buttons">
-    <button
-      type="submit"
-      class="btn btn-light timer_button"
-      (click)="start()"
-    >
+    <button type="submit" class="btn btn-light timer_button" (click)="start()">
       START
     </button>
     <br />
@@ -85,12 +81,18 @@
         beneficial for you. How about you try do somthing fun? Press the button
         bellow and do a random activity.
       </div>
-        <button class="btn btn-secondary" type="button">
-            Generate random activity
-          </button>
-        <div class="form-check shadow-sm p-3 mb-5 bg-white rounded">
-            <p>Category:</p>
-            <div *ngFor="let item of items">
+      <button
+        class="btn btn-secondary"
+        type="button"
+        (click)="generateActivity()"
+        *ngIf="activityGenerator == false"
+      >
+        Generate random activity
+      </button>
+      <div class="form-check shadow-sm p-3 mb-5 bg-white rounded">
+        <p *ngIf="activityGenerator == false">Category:</p>
+        <div *ngIf="activityGenerator == false">
+          <div *ngFor="let item of items">
             <input
               class="form-check-input checkbox_box"
               type="checkbox"
@@ -98,10 +100,31 @@
               id="flexCheckDefault"
             />
             <label class="form-check-label" for="flexCheckDefault">
-              {{item}}
+              {{ item }}
             </label>
           </div>
         </div>
+
+        <div class="challange" *ngIf="activityGenerator == true">
+          <div>Name</div>
+          <div>Description</div>
+          <div>Link</div>
+        </div>
+      </div>
+      <div>
+        Try the challange with some college! Every person that joins you adds 1
+        point to final score.
+      </div>
+      <table>
+        <tr *ngFor="let item of onlinePeople">
+          <td class="form-check-label" for="flexCheckDefault">-{{ item }}</td>
+          <td>
+            <button class="btn" style="background-color: #8ee000" type="button">
+              Invite
+            </button>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>

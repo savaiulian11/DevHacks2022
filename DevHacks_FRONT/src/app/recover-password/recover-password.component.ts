@@ -1,6 +1,7 @@
 import {Component,ElementRef,HostListener,OnInit,ViewChild,} from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-recover-password',
@@ -77,8 +78,10 @@ export class RecoverPasswordComponent implements OnInit {
 
   constructor(
     private form: FormBuilder,
-    private route: Router
+    private route: Router,
+    private appComponent: AppComponent
   ) {
+    this.appComponent.page = 0;
   }
 
   ngOnInit(): void {}

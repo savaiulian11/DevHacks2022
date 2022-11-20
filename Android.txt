@@ -1,0 +1,24 @@
+npm install --save @capacitor/core @capacitor/cli
+
+angular.json->“outputPath”: “dist/AngularApp” to “outputPath”: “www”
+
+ng build
+
+npx cap init
+
+capacitor.cinfig.ts->webDir:'dist' to webDir:'dist/dev-hacks-front'
+
+npx cap add android
+
+npx cap copy android
+
+npx cap open android
+
+
+
+
+ng build --configuration production
+
+npx cap copy android
+
+npx cap open android

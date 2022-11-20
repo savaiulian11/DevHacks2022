@@ -23,7 +23,7 @@ import { RewardsComponent } from './rewards/rewards.component';
     RecoverPasswordComponent,
     MainComponent,
     HistoryComponent,
-    RewardsComponent
+    RewardsComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +32,8 @@ import { RewardsComponent } from './rewards/rewards.component';
     FormsModule,
     HttpClientJsonpModule,
     HttpClientModule,
-    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

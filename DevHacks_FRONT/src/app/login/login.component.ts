@@ -1,16 +1,14 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import * as bcrypt from 'bcryptjs';
 import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-
   myForm = this.form.group({
     username: [''],
     password: [''],
@@ -18,15 +16,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     //this.appComponent.togglerClick();
-    if(this.myForm.value.password==undefined)
-    return;
-
-    bcrypt.hash('1234', 10, (err, hash) => {
-      this.myForm.value.password = hash;
-    });
-
-    bcrypt.compare('1234',this.myForm.value.password).then(result=>{console.log(result)});
-
+    if (this.myForm.value.password == undefined) return;
 
     console.log(this.myForm.value.password);
 
@@ -42,10 +32,9 @@ export class LoginComponent implements OnInit {
   constructor(
     private form: FormBuilder,
     private route: Router,
-    private appComponent:AppComponent
-  ) {}
-
-  ngOnInit(): void {
+    private appComponent: AppComponent
+  ) {
+    this.appComponent.page = 0;
   }
-
+  ngOnInit(): void {}
 }

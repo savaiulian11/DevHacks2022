@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BURNOUT</string>
+    <string name="title_activity_main">BURNOUT</string>
+    <string name="package_name">com.burnout.app</string>
+    <string name="custom_url_scheme">com.burnout.app</string>
+</resources>
