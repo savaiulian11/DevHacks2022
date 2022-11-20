@@ -14,6 +14,6 @@ Utilizatorii sunt angajatii companiei.
     -> sistem de reward pentru activitati  
     -> monitorizare timp lucru/zi  
     
- - Prezentari:
+ - Prezentari:  
 https://youtu.be/d2HPoDCCBr0  
 https://youtu.be/UJiwIxTTaYM  
